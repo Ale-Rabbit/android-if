@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.widget.RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.example.exerciciofixacao.PrimeiraTela">
+
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="50dp"
+        android:layout_height="26dp"
+        android:text="Nome"
+        android:layout_marginTop="44dp"
+        android:layout_alignParentTop="true"
+        android:layout_alignRight="@+id/bt_cadastrar"
+        android:layout_alignEnd="@+id/bt_cadastrar" />
+
+    <EditText
+        android:id="@+id/et_nome"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:inputType="textPersonName"
+        android:layout_alignBaseline="@+id/textView"
+        android:layout_alignBottom="@+id/textView"
+        android:layout_toRightOf="@+id/textView"
+        android:layout_toEndOf="@+id/textView" />
+
+    <RadioGroup
+        android:id="@+id/rg_sexo"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/textView2"
+        android:layout_alignLeft="@+id/textView"
+        android:layout_alignStart="@+id/textView"
+        android:layout_marginBottom="53dp">
+
+        <RadioButton
+            android:id="@+id/rb_masculino"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="Masculino" />
+
+        <RadioButton
+            android:id="@+id/rb_feminino"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_above="@+id/et_nome"
+            android:layout_toEndOf="@+id/cb_filme"
+            android:layout_toRightOf="@+id/cb_filme"
+            android:layout_weight="1"
+            android:text="Feminino" />
+
+    </RadioGroup>
+
+    <CheckBox
+        android:id="@+id/cb_musica"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Musica"
+        android:layout_below="@+id/cb_filme"
+        android:layout_alignLeft="@+id/cb_filme"
+        android:layout_alignStart="@+id/cb_filme" />
+
+    <CheckBox
+        android:id="@+id/cb_filme"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Filme"
+        android:layout_alignTop="@+id/textView2"
+        android:layout_alignRight="@+id/textView2"
+        android:layout_alignEnd="@+id/textView2"
+        android:layout_marginTop="19dp" />
+
+    <TextView
+        android:id="@+id/textView2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Interesses"
+        android:layout_centerVertical="true"
+        android:layout_alignLeft="@+id/rg_sexo"
+        android:layout_alignStart="@+id/rg_sexo" />
+
+    <Button
+        android:id="@+id/bt_cadastrar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Cadastrar"
+        android:layout_alignBaseline="@+id/bt_enviar"
+        android:layout_alignBottom="@+id/bt_enviar"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true" />
+
+    <Button
+        android:id="@+id/bt_enviar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Enviar"
+        android:layout_marginBottom="11dp"
+        android:layout_alignParentBottom="true"
+        android:layout_alignRight="@+id/et_nome"
+        android:layout_alignEnd="@+id/et_nome" />
+
+</android.widget.RelativeLayout>
