@@ -1,5 +1,6 @@
 package com.example.exemplobd.dao;
 
+import android.content.Context;
 import android.database.sqlite.SQLiteDatabase;
 import android.database.sqlite.SQLiteOpenHelper;
 
@@ -8,14 +9,14 @@ public class SQLHelper extends SQLiteOpenHelper{
     private static final int VERSAO = 1;
     private static SQLHelper instance;
 
-    private SQLHelper() {
-
+    private SQLHelper(Context ctx) {
+        super(ctx, NOME_BANCO, null, VERSAO);
     }
 
-    public static SQLHelper getInstance(){
+    public static SQLHelper getInstance(Context ctx){
 
         if(instance == null){
-            instance = new SQLHelper();
+            instance = new SQLHelper(ctx);
         }
 
         return instance;
@@ -24,7 +25,7 @@ public class SQLHelper extends SQLiteOpenHelper{
 
     @Override
     public void onCreate(SQLiteDatabase db) {
-
+        db.execSQL(ContatoDAO.CREATE_TABLE);
 
     }
 
