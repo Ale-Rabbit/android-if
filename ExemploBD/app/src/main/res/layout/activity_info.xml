@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/tv_nome"
+        android:hint="nome" />
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/tv_telefone"
+        android:layout_below="@+id/tv_email"
+        android:layout_alignParentStart="true"
+        android:layout_marginTop="70dp"
+        android:hint="telefone" />
+
+    <Button
+        android:text="Editar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/bt_editar"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentStart="true"
+        android:layout_marginStart="190dp" />
+
+    <Button
+        android:text="Excluir"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/bt_excluir"
+        android:layout_above="@+id/bt_editar"
+        android:layout_marginEnd="190dp"
+        android:layout_alignParentBottom="true"/>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/tv_email"
+        android:layout_marginTop="72dp"
+        android:layout_below="@+id/tv_nome"
+        android:layout_alignParentStart="true"
+        android:hint="email" />
+</RelativeLayout>
