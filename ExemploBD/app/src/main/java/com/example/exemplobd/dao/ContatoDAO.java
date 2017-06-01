@@ -28,16 +28,20 @@ public class ContatoDAO {
         return id != -1;
     }
 
-    public void editar(Contato contato){
+    public boolean editar(Contato contato){
         String where = "WHERE "+COLUNA_ID+"=?";
         String[] whereArgs = {String.valueOf(contato.getId())};
-        this.db.update(NOME_TABELA, this.contatoToContentValues(contato), where, whereArgs);
+        int linhasAfetadas = this.db.update(NOME_TABELA, this.contatoToContentValues(contato), where, whereArgs);
+
+        return linhasAfetadas > 0;
     }
 
-    public void excluir(int id){
+    public boolean excluir(int id){
         String where = "WHERE "+COLUNA_ID+"=?";
         String[] whereArgs = {String.valueOf(id)};
-        this.db.delete(NOME_TABELA, where, whereArgs);
+        int registrosAfetados = this.db.delete(NOME_TABELA, where, whereArgs);
+
+        return registrosAfetados > 0;
     }
 
     public ArrayList<Contato> listar(){

@@ -22,8 +22,8 @@ public class TelaMenu extends AppCompatActivity {
         btCadastrar.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent proximaTela = new Intent(TelaMenu.this, TelaCadastro.class);
-                startActivity(proximaTela);
+                Intent itTelaCadastro = new Intent(TelaMenu.this, TelaCadastro.class);
+                startActivity(itTelaCadastro);
             }
         });
 
@@ -31,6 +31,21 @@ public class TelaMenu extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 //Intent proximaTela = new Intent(TelaMenu.this, )
+            }
+        });
+
+        btExcluir.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+
+            }
+        });
+
+        btListar.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent itTelaListar = new Intent(TelaMenu.this, TelaListar.class);
+                startActivity(itTelaListar);
             }
         });
     }
